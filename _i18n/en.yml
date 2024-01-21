@@ -1,0 +1,11 @@
+site:
+  name: Rebun
+  tagline: Ceibe
+  header:
+    aboutMe: About me
+    Contact: Contact
+
+main:
+  welcomeSection:
+    heading: Rubén (Rebun) Gómez Dopazo
+    p1: This is my website. Looks like you want to know more about me, so take a look at what I have to say.

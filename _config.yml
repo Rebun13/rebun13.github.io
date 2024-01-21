@@ -1,0 +1,9 @@
+url: https://rebun13.github.io/
+
+languages: ["gl", "es", "en"]
+exclude_from_localizations: ["assets", "CNAME"]
+defaultLang: gl
+languageNames:
+  gl: Galician
+  es: Spanish
+  en: English

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ site.lang }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>{% t site.name %}</title>
 </head>
 <body>
     <header>
@@ -16,6 +16,20 @@
             </ul>
         </nav>
     </header>
-    <h1>Test test test test</h1>
+    <section>
+        <h1>{% t main.welcomeSection.heading %}</h1>
+        <p>{% t main.welcomeSection.p1 %}</p>
+    </section>
+    <footer>
+        <a class="active" href="#">{{ site.languageNames[site.lang] }}</a>
+        {% for lang in site.languageNames %}
+        {% if lang[0] == site.lang %} {% continue %} {% endif %}
+        {% if page.namespace %}
+        <a href="{% tl {{ page.namespace }} {{ lang[0] }} %}">{{ lang[1] }}</a>
+        {% else %}
+        <a href="{{ site.baseurl_root }}/{{ lang[0] }}/">{{ lang[1] }}</a>
+        {% endif %}
+        {% endfor %}
+    </footer>
 </body>
 </html>
