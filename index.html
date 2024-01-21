@@ -25,9 +25,9 @@
         {% for lang in site.languageNames %}
         {% if lang[0] == site.lang %} {% continue %} {% endif %}
         {% if page.namespace %}
-        <a href="{% tl {{ page.namespace }} {{ lang[0] }} %}">{{ lang[1] }}</a>
+        <a href="{% tl {{ page.namespace }} {{ lang[0] }} %}">{{ lang[0] }}</a>
         {% else %}
-        <a href="{{ site.baseurl_root }}/{{ lang[0] }}/">{{ lang[1] }}</a>
+        <a href="{{ site.baseurl_root }}/{{ lang[1] }}/">{{ lang[1] }}</a>
         {% endif %}
         {% endfor %}
     </footer>
