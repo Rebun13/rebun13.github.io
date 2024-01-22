@@ -1,7 +1,0 @@
-- _includes, _layouts and _posts: regular Jekyll folders
-- assets: contains all static assets (images, CSS and Javascript files)
-- _plugins: contains the modified plugin you downloaded
-- CNAME: needed to deploy the site to GitHub Pages with a custom domain
-- _i18n: contains the translations of individual strings in the *.yml files as well as translated pages and collection documents in the respective subfolders
-- index.html: default page that will be put into each of the language subfolders. Caution: It doesn't serve as the central index.html for the site
-- base.html: fix the absence of a central index.html. The plugin takes this file and makes it the index.html of your generated _site
