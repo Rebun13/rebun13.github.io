@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles.css">
-    <title>Rebun - Sobre min</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">    <title>Rebun - Sobre min</title>
 </head>
 <body>
     <header>
@@ -16,21 +18,21 @@
             </ul>
         </nav>
     </header>
-    <section>
-        <h1>Rubén (Rebun) Gómez Dopazo</h1>
-        <p>Esta é a miña páxina web. Coido que estás aquí para saber de min, así que bota un olho ao que teño que contar.</p>
+    <section class="main-content">
+        <h1>Rubén Gómez Dopazo</h1>
+        <p>Esta é a minha páxina web. Coido que estás aquí para saber de min, así que bota un olho ao que tenho que contar.</p>
     </section>
-    <footer>
-        <select name="idioma" id="idioma">
+    <div class="selector-linguaxe">
+        <select name="linguaxe" id="linguaxe">
             <option value="/gl/sobre-min.html" selected>GL</option>
             <option value="/es/sobre-mi.html">ES</option>
             <option value="/en/about-me.html">EN</option>
         </select>
-    </footer>
+    </div>
     <script>
-        let selectorIdioma = document.getElementById('idioma');
-        selectorIdioma.onchange = function() {
-            window.location.replace(window.location.origin + selectorIdioma.value);
+        let selectorLinguaxe = document.getElementById('linguaxe');
+        selectorLinguaxe.onchange = function() {
+            window.location.replace(window.location.origin + this.value);
         }
     </script>
 </body>

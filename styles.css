@@ -1,6 +1,21 @@
+:root {
+    --header-height: 80px;
+    --margin-to-header: calc(var(--header-height) + 50px);
+    --font-1: "Space Mono";
+    --font-2: "Rubik";
+}
+
+html * {
+    font-family: var(--font-2), Tofu;
+}
+
+h1, h2 {
+    font-family: var(--font-1), Tofu;    
+}
+
 body {
-    margin: 80px 0 0 0;
-    height: 125vh;
+    margin: var(--margin-to-header) 0 0 0;
+    min-height: 125vh;
     font-family: sans-serif;
 }
 
@@ -11,7 +26,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    height: 80px;
+    height: var(--header-height);
     box-shadow: 0 0 10px 0 black;
     display: flex;
     align-items: center;
@@ -43,4 +58,17 @@ header {
         height: 60px;
         margin-left: 40px;
     }
+}
+
+/* main-content */
+.main-content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* selector-linguaxe */
+.selector-linguaxe {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
 }
