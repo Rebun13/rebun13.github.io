@@ -1,35 +1,25 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang }}">
+<html lang="gl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>{% t site.name %}</title>
+    <title>Document</title>
 </head>
 <body>
-    <header>
-        <img src="static/images/logo1.png">
-        <nav>
-            <ul>
-                <li><a href="#" class="selected">About me</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section>
-        <h1>{% t main.welcomeSection.heading %}</h1>
-        <p>{% t main.welcomeSection.p1 %}</p>
-    </section>
-    <footer>
-        <a class="active" href="#">{{ site.languageNames[site.lang] }}</a>
-        {% for lang in site.languageNames %}
-        {% if lang[0] == site.lang %} {% continue %} {% endif %}
-        {% if page.namespace %}
-        <a href="{% tl {{ page.namespace }} {{ lang[0] }} %}">{{ lang[0] }}</a>
-        {% else %}
-        <a href="{{ site.baseurl_root }}/{{ lang[1] }}/">{{ lang[1] }}</a>
-        {% endif %}
-        {% endfor %}
-    </footer>
+    <script>
+        language = document.documentElement.lang;
+        url = '';
+        switch (language) {
+            case 'en':
+                url = 'en/sobre-min.html';
+                break;
+            case 'es':
+                url = 'es/sobre-min.html';
+                break;
+            default:
+                url = 'gl/sobre-min.html';
+        }
+        console.log(window.location.origin + url);
+    </script>
 </body>
 </html>
