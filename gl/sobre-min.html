@@ -27,5 +27,11 @@
             <option value="/en/index.html">EN</option>
         </select>
     </footer>
+    <script>
+        let selectorIdioma = document.getElementById('idioma');
+        selectorIdioma.onchange = function() {
+            window.location.replace(window.location.origin + selectorIdioma.value);
+        }
+    </script>
 </body>
 </html>
