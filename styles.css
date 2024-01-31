@@ -9,7 +9,7 @@
 
 html * {
     font-family: var(--font-2), Tofu;
-    text-justify: inter-word;
+    text-align: justify;
 }
 
 h1, h2 {
@@ -34,9 +34,13 @@ header {
     display: flex;
     align-items: center;
     z-index: 1000;
-
+    
     * {
         display: inline;
+    }
+
+    #close-sidebar, #open-sidebar {
+        display: none;
     }
 
     li {
@@ -128,6 +132,44 @@ header {
 }
 
 @media only screen and (max-width: 1024px) {
+    header {
+        #open-sidebar {
+            display: inline-block;
+            position: absolute;
+            right: 50px;
+        }
+
+        #close-sidebar {
+            display: block;
+        }
+
+        nav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: #f2f2f2;
+            overflow-x: hidden;
+            padding-top: 60px;
+            transition: 0.5s;
+            box-shadow: 0 0 10px 0 black;
+
+            a {
+                padding: 8px 8px 8px 32px;
+                display: block;
+                transition: 0.3s;
+            }
+
+            #close-sidebar {
+                position: absolute;
+                top: 0;
+              }
+        }
+    }
+
+
     .tarxeta-info {
         display: flex;
         width: 100%;
@@ -153,11 +195,11 @@ header {
                     color: teal;
                     background-color: #f2f2f2;
                     border-radius: 10px;
+                    text-align: center;
                 }
             }
             
             .descricion {
-
                 p {
                     margin: 0;
                 }
