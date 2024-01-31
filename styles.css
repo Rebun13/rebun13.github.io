@@ -46,7 +46,7 @@ header {
     li {
         margin: 20px;
     }
-    
+
     nav {
         a {
             color: black;
@@ -166,6 +166,10 @@ header {
                 position: absolute;
                 top: 0;
               }
+        }
+
+        nav.active {
+            width: 250px;
         }
     }
 
